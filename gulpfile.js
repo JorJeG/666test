@@ -3,7 +3,10 @@ const gulp = require('gulp'),
       del = require('del'),
       sass = require('gulp-sass'),
       prefixer = require('gulp-autoprefixer'),
-      sourcemap = require('gulp-sourcemaps');
+      sourcemap = require('gulp-sourcemaps'),
+      browserSync = require('browser-sync');
+
+browserSync.init({server: './build'});
 
 function buildHTML() {
   return gulp.src('./src/templates/*.pug')
@@ -24,7 +27,16 @@ function buildCSS() {
     .pipe(sourcemap.write())
     .pipe(prefixer())
     .pipe(gulp.dest('./build'))
+    .pipe(browserSync.stream());
 }
 
 gulp.task('html', gulp.series(cleanHTML, buildHTML));
 gulp.task('css', buildCSS);
+
+function watch() {
+  gulp.watch('./src/sass/**/*.scss', buildCSS);
+  gulp.watch('./src/templates/**/*.pug', gulp.series(cleanHTML, buildHTML));
+  gulp.watch('./build/index.html').on('change', browserSync.reload);
+}
+
+gulp.task('default', gulp.series(buildCSS, buildHTML, watch));
