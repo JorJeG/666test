@@ -3,5 +3,9 @@ html(lang='ru')
   include head/head
   body.page
     //- include header/header
-    include main/main
+    main.main
+      section.rooms
+        include rooms/rooms
+      button#more показать ещё 2
     //- include footer/footer
+    script(src="index.js")

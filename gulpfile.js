@@ -6,7 +6,9 @@ const gulp = require('gulp'),
       sourcemap = require('gulp-sourcemaps'),
       browserSync = require('browser-sync');
 
-browserSync.init({server: './build'});
+browserSync.init({
+  proxy: 'localhost:3001'
+});
 
 function buildHTML() {
   return gulp.src('./src/templates/*.pug')
@@ -35,8 +37,7 @@ gulp.task('css', buildCSS);
 
 function watch() {
   gulp.watch('./src/sass/**/*.scss', buildCSS);
-  gulp.watch('./src/templates/**/*.pug', gulp.series(cleanHTML, buildHTML));
-  gulp.watch('./build/index.html').on('change', browserSync.reload);
+  gulp.watch('./src/templates/**/*.pug').on('change', browserSync.reload);
 }
 
-gulp.task('default', gulp.series(buildCSS, buildHTML, watch));
+gulp.task('default', gulp.series(buildCSS, watch));

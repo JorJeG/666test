@@ -1,0 +1,23 @@
+each room in rooms
+  div.card
+    div.card__row
+      div.card__offer= room.offer
+      div.card__slogan= room.slogan
+      div.card__favorite= room.favorite
+    div.card__row
+      img(src=room.schema, alt=room.title)
+    div.card__row
+      h2.card__title= room.title
+    div.card__row.card__row_options
+      div.card__option= room.option
+      div.card__area= room.area
+        | м
+        sup
+          | 2
+        |  площадь
+      div.card__floor= room.floor
+        |  этаж
+    div.card__row
+      div.card__price= room.price
+    div.card__row.card__row_status
+      p.card__status= room.status
