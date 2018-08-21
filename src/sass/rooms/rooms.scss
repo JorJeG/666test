@@ -1,0 +1,8 @@
+.rooms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  &__card {
+    margin: 27px 24px;
+  }
+}

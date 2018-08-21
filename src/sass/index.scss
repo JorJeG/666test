@@ -4,10 +4,20 @@ body {
   margin: 0;
 }
 
+.img-wrapper {
+  height: 210px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
 @import 'page/page.scss';
 @import 'header/header.scss';
 @import 'nav/nav.scss';
 @import 'contact/contact.scss';
+@import 'search/search.scss';
 @import 'card/card.scss';
+@import 'rooms/rooms.scss';
+@import 'main/main.scss';
 @import 'footer/footer.scss';
 @import 'form/form.scss';

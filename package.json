@@ -8,6 +8,7 @@
     "build:html": "gulp html",
     "build:css": "gulp css",
     "build": "gulp",
+    "develop": "npm-run-all --parallel build start",
     "start": "node server.js"
   },
   "author": "JorJeG",
@@ -21,5 +22,8 @@
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.3"
   }
 }

@@ -3,9 +3,12 @@ html(lang='ru')
   include head/head
   body.page
     //- include header/header
-    main.main
+    section.search 
+      h2.search__result Найдено 666 квартир
+    main.main.page__main
+      p.main__sort Сортировать по:
       section.rooms
         include rooms/rooms
-      button#more показать ещё 2
+      button#more.main__more-btn показать еще 20
     //- include footer/footer
     script(src="index.js")

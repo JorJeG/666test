@@ -1,22 +1,26 @@
 each room in rooms
-  div.card
+  div.card.rooms__card
     div.card__row
-      div.card__offer= room.offer
-      div.card__slogan= room.slogan
+      span.card__offer= room.offer
+      span.card__slogan= room.slogan
       div.card__favorite= room.favorite
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 51 48">
+          <path fill="none" stroke="#000" d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/>
+        </svg>
     div.card__row
-      img(src=room.schema, alt=room.title)
+      div.img-wrapper
+        img.card__img(src=room.schema, alt=room.title)
     div.card__row
       h2.card__title= room.title
-    div.card__row.card__row_options
-      div.card__option= room.option
-      div.card__area= room.area
-        | м
+    div.card__row
+      p.card__option= room.option
+      p.card__area= room.area
+        |  м
         sup
           | 2
-        |  площадь
-      div.card__floor= room.floor
-        |  этаж
+        span.card__area_small  площадь
+      p.card__floor= room.floor
+        span.card__floor_small  этаж
     div.card__row
       div.card__price= room.price
     div.card__row.card__row_status
