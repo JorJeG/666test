@@ -1,0 +1,20 @@
+-
+  const list = [
+    {name: 'Объекты', url: '#'},
+    {name: 'Компания', url: '#'},
+    {name: 'Как купить', url: '#'},
+    {name: 'Агентам', url: '#'},
+    {name: 'Регионам', url: '#'},
+    {name: 'Акции', url: '#'},
+    {name: 'Контакты', url: '#'}];
+
+header.header
+  img.header__logo(src="images/logo.png", alt="Company logo")
+  nav.nav
+    ul.nav__list
+      each item in list
+        li.nav__item
+          a.nav__link(href=item.url)= item.name
+  div.contact
+    h2.contact__number 8 888 88 88 98
+    p.contact__slogan Звони скорее!

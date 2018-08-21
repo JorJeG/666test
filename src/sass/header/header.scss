@@ -1,0 +1,20 @@
+.header {
+  background: #002f2f;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 1rem 7rem;
+  &__logo {
+    align-self: center;
+    height: 85px;
+    width: auto;
+  }
+}
+
+@media (max-width: 1550px) {
+  .header {
+    padding: 1rem 2rem;
+  }
+}

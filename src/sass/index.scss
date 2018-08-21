@@ -1,0 +1,13 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+@import 'page/page.scss';
+@import 'header/header.scss';
+@import 'nav/nav.scss';
+@import 'contact/contact.scss';
+@import 'card/card.scss';
+@import 'footer/footer.scss';
+@import 'form/form.scss';

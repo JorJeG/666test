@@ -1,0 +1,27 @@
+.card {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  &__row {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 17px 52px;
+    display: flex;
+    &_status {
+      justify-content: center;
+      background: #A7A37E;
+      padding: 0.6rem 52px;
+      color: white;
+      font-size: 0.77rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+    }
+  }
+  &__option,
+  &__area,
+  &__floor {
+    width: 33%;
+    margin-right: 14px;
+  }
+}

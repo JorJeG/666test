@@ -1,0 +1,26 @@
+.footer {
+  width: 100%;
+  height: 10rem;
+  max-width: 1280px;
+  background: #046380;
+  color: #fff;
+  display: flex;
+  &__slogan {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem;
+  }
+  &__title {
+    margin: 0;
+  }
+  &__desc {
+    margin: 1.3rem 0 0;
+  }
+  &__form {
+    width: 55%;
+    height: 100%;
+  }
+}

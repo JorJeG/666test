@@ -1,0 +1,15 @@
+[
+  {
+    "id": 0,
+    "schema": "/images/studio-44.png",
+    "title": "Студия №44",
+    "option": "без отделки",
+    "area": "28",
+    "floor": "12/14",
+    "price": "1 900 000 руб.",
+    "status": "забронировано",
+    "offer": "",
+    "slogan": "",
+    "favorite": ""
+  }
+]

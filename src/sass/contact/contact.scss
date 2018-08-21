@@ -1,0 +1,17 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__number {
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: 0.07rem;
+    font-weight: 300;
+  }
+  &__slogan {
+    margin: 0;
+    font-size: 1.2rem;
+    letter-spacing: 0.09rem;
+    font-weight: 300;
+  }
+}
