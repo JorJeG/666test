@@ -47,6 +47,10 @@ main.addEventListener('click', (e) => {
 sortPriceBtn.addEventListener('click', (e) => {
   const dataset = sortPriceBtn.dataset;
   const frag = document.createDocumentFragment();
+  if(dataset.active !== 'active') {
+    sortRoomsBtn.dataset.active = '';
+    dataset.active = 'active';
+  }
 
   if (dataset.direction === 'ascend') {
     arrRooms.sort(function(a, b) {
@@ -71,6 +75,10 @@ sortPriceBtn.addEventListener('click', (e) => {
 sortRoomsBtn.addEventListener('click', (e) => {
   const dataset = sortRoomsBtn.dataset;
   const frag = document.createDocumentFragment();
+  if(dataset.active !== 'active') {
+    sortPriceBtn.dataset.active = '';
+    dataset.active = 'active';
+  }
 
   if (dataset.direction === 'ascend') {
     arrRooms.sort(function(a, b) {

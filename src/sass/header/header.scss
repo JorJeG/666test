@@ -11,6 +11,9 @@
     height: 85px;
     width: auto;
   }
+  &__title {
+    display: none;
+  }
 }
 
 @media (max-width: 1550px) {

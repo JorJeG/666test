@@ -9,10 +9,18 @@ html(lang='ru')
     main.main.page__main
       div.main__sort
         span Сортировать по:
-        span.main__sort_price(data-direction='ascend')  Цене
-        span.main__sort_rooms(data-direction='ascend') Комнатам
+        a.main__sort_price(data-direction='ascend')  Цене
+        a.main__sort_rooms(data-direction='ascend') Комнатам
       section.rooms
         include rooms/rooms
       button#more.main__more-btn показать еще 20
     include footer/footer
-    script(src="index.js")
+    script(async, src="index.js")
+    script(src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js")
+    script.
+      addBackToTop({
+        diameter: 56,
+        backgroundColor: 'rgb(0, 0, 0)',
+        textColor: '#fff',
+        scrollDuration: 400
+      })
