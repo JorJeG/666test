@@ -32,8 +32,12 @@
   &__favorite {
     cursor: pointer;
     margin-left: auto;
+    svg {
+      pointer-events: none;
+    }
     path {
       fill: none;
+      pointer-events: none;
     }
     &:hover {
       path {
@@ -46,6 +50,9 @@
         fill: #000;
       }
     }
+  }
+  &__icon {
+    pointer-events: none;
   }
   &__img {
     margin: 0 auto;
