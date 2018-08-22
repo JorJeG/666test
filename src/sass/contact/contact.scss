@@ -15,3 +15,14 @@
     font-weight: 300;
   }
 }
+
+@media (max-width: 1279px) {
+  .contact {
+    &__number {
+      font-size: 1.2rem;
+    }
+    &__slogan {
+      font-size: 1rem;
+    }
+  }
+}

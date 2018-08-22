@@ -18,3 +18,16 @@
     padding: 1rem 2rem;
   }
 }
+
+@media (max-width: 1279px) {
+  .header {
+    padding: 1rem 2rem;
+    justify-content: flex-start;
+    &__logo {
+      height: 50px;
+    }
+    &__contact {
+      margin-left: 2rem;
+    }
+  }
+}
