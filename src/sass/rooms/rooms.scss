@@ -6,3 +6,11 @@
     margin: 27px 24px;
   }
 }
+
+@media (max-width: 375px) {
+  .rooms {
+    &__card {
+      margin: 27px 0;
+    }
+  }
+}

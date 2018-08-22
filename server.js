@@ -10,11 +10,11 @@ app.set('view engine', 'pug');
 app.use(express.static('build'));
 
 app.get('/', (request, response) => {
-  response.render('index', {rooms: data});
+  response.render('index', {flats: data});
 });
 
 app.get('/data', (request, response) => {
-  response.render('rooms/rooms', {rooms: data});
+  response.render('rooms/rooms', {flats: data});
 });
 
 app.listen(PORT, function() {
