@@ -1,5 +1,5 @@
 .main {
-  width: 96vw;
+  width: 100vw;
   max-width: 1280px;
   background-color: #fff;
   padding: 0 0 75px 0;
@@ -29,10 +29,18 @@
   .main {
     &__sort {
       font-size: 0.9rem;
-      margin: 1rem 1rem;
+      margin: 1rem 27px;
     }
     &__more-btn {
       width: 320px;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .main {
+    &__sort {
+      margin: 1rem 20px;
     }
   }
 }

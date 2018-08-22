@@ -30,9 +30,21 @@
     border-radius: 3px;
   }
   &__favorite {
+    cursor: pointer;
     margin-left: auto;
     path {
-      fill: #000;
+      fill: none;
+    }
+    &:hover {
+      path {
+        fill: #f00;
+        stroke: #f00;
+      }
+    }
+    &_selected {
+      path {
+        fill: #000;
+      }
     }
   }
   &__img {

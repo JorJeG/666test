@@ -8,25 +8,108 @@
     display: flex;
     flex-direction: column;
     &_email {
-      width: 320px;
+      width: 45%;
       height: 48px;
       margin-right: 54px;
     }
     &_submit {
-      width: 212px;
+      width: 35%;
       height: 48px;
+    }
+    &_news {
+      margin-top: -40px;
+      position: relative;
     }
   }
   &__label {
     display: none;
+    &_news {
+      padding-left: 27px;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      font-weight: 300;
+      letter-spacing: 0.06rem;
+    }
+  }
+  &__custom-checkbox {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    pointer-events: none;
+  }
+  &__input_checkbox:checked + &__custom-checkbox {
+    &::before {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 2px;
+      right: 6px;
+      width: 2px;
+      height: 13px;
+      transform: rotate(35deg);
+      background-color: #118A7D;
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      display: block;
+      bottom: 4px;
+      left: 5px;
+      width: 2px;
+      height: 6px;
+      transform: rotate(-45deg);
+      background-color: #118A7D;
+    }
   }
   &__input {
     height: 100%;
     border: none;
     border-radius: 2px;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+    &_checkbox {
+      position: relative;
+      top: -18px;
+      visibility: hidden;
+    }
+    &::placeholder {
+      color: #118A7D;
+    }
   }
   &__button {
     height: 100%;
     border-radius: 2px;
+    border: none;
+    background-color: #A6A17D;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 420px) {
+  .form {
+    justify-content: center;
+    &__group {
+      display: flex;
+      flex-direction: column;
+      &_email {
+        width: 320px;
+        margin: 0;
+      }
+      &_submit {
+        width: 320px;
+        order: 1;
+        margin: 0 0 2rem;
+      }
+      &_news {
+        margin: 15px 0 15px -83px;
+        position: relative;
+      }
+    }
   }
 }

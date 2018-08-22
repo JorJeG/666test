@@ -1,5 +1,5 @@
 .search {
-  width: 96vw;
+  width: 100vw;
   max-width: 1280px;
   &__result {
     font-size: 3rem;
@@ -10,8 +10,16 @@
 @media (max-width: 1023px) {
   .search {
     &__result {
-      margin: 1rem 1rem;
+      margin: 1rem 27px;
       font-size: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .search {
+    &__result {
+      margin: 1rem 20px;
     }
   }
 }
