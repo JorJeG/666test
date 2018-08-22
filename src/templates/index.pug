@@ -9,8 +9,9 @@ html(lang='ru')
     main.main.page__main
       div.main__sort
         span Сортировать по:
-        a.main__sort_price(data-direction='ascend')  Цене
-        a.main__sort_rooms(data-direction='ascend') Комнатам
+        div
+          a.main__sort_price(data-direction='ascend')  Цене
+          a.main__sort_rooms(data-direction='ascend') Комнатам
       section.rooms
         include rooms/rooms
       button#more.main__more-btn показать еще 20
