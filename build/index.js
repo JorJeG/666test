@@ -40,43 +40,19 @@ main.addEventListener('click', (e) => {
   }
 }, false);
 
-
-/**
- * TODO: Порефакторить эти повторы
- */
-sortPriceBtn.addEventListener('click', (e) => {
-  const dataset = sortPriceBtn.dataset;
-  const frag = document.createDocumentFragment();
-  if(dataset.active !== 'active') {
-    sortRoomsBtn.dataset.active = '';
-    dataset.active = 'active';
-  }
-
-  if (dataset.direction === 'ascend') {
-    arrRooms.sort(function(a, b) {
-      const price1 = parseInt(a.dataset.price.replace(/\s/g, ''));
-      const price2 = parseInt(b.dataset.price.replace(/\s/g, ''));
-      return price1 - price2;
-    });
-    dataset.direction = 'descend';
-  } else {
-    arrRooms.sort(function(a, b) {
-      const price1 = parseInt(a.dataset.price.replace(/\s/g, ''));
-      const price2 = parseInt(b.dataset.price.replace(/\s/g, ''));
-      return price2 - price1;
-    });
-    dataset.direction = 'ascend';
-  }
-  arrRooms.forEach(room => frag.appendChild(room));
-  rooms.innerHTML = '';
-  rooms.appendChild(frag);
+sortPriceBtn.addEventListener('click', () => {
+  sortBy(sortPriceBtn, sortRoomsBtn);
 });
 
-sortRoomsBtn.addEventListener('click', (e) => {
-  const dataset = sortRoomsBtn.dataset;
+sortRoomsBtn.addEventListener('click', () => {
+  sortBy(sortRoomsBtn, sortPriceBtn);
+});
+
+function sortBy(element, another) {
+  const dataset = element.dataset;
   const frag = document.createDocumentFragment();
   if(dataset.active !== 'active') {
-    sortPriceBtn.dataset.active = '';
+    another.dataset.active = '';
     dataset.active = 'active';
   }
 
@@ -98,4 +74,4 @@ sortRoomsBtn.addEventListener('click', (e) => {
   arrRooms.forEach(room => frag.appendChild(room));
   rooms.innerHTML = '';
   rooms.appendChild(frag);
-});
+}

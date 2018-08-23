@@ -106,12 +106,20 @@
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    background: #A7A37E;
     color: white;
     width: 100%;
     text-align: center;
     margin: 0 -19px;
     height: 100%;
     padding: 0.5rem 38px;
+    &_free {
+      background: #042F2F;
+    }
+    &_sales {
+      background: #A1A1A1;
+    }
+    &_booked {
+      background: #A7A37E;
+    }
   }
 }

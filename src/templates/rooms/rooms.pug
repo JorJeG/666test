@@ -23,7 +23,14 @@ each flat in flats
       p.card__floor= flat.floor
         span.card__floor_small  этаж
     div.card__row
-      div.card__price= flat.price
+      div.card__price
+        each char in flat.price
+          span.price-char= char
         |  руб.
     div.card__row.card__row_status
-      p.card__status= flat.status
+      if flat.status == 'забронировано'
+        p.card__status.card__status_booked= flat.status
+      else if flat.status == 'продано'
+        p.card__status.card__status_sales= flat.status
+      else if flat.status == 'свободно'
+        p.card__status.card__status_free= flat.status

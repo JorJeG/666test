@@ -5,7 +5,10 @@ html(lang='ru')
     include header/header
     include aside/aside
     section.search 
-      h2.search__result Найдено 666 квартир
+      h2.search__result
+        | Найдено 
+        span.overall= overall
+        |  квартир
     main.main.page__main
       div.main__sort
         span Сортировать по:

@@ -10,7 +10,8 @@ app.set('view engine', 'pug');
 app.use(express.static('build'));
 
 app.get('/', (request, response) => {
-  response.render('index', {flats: data});
+  const overall = data.length*55 + 6; 
+  response.render('index', {flats: data, overall});
 });
 
 app.get('/data', (request, response) => {
