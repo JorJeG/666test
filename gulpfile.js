@@ -2,8 +2,8 @@ const gulp = require('gulp'),
       pug = require('gulp-pug'),
       del = require('del'),
       sass = require('gulp-sass'),
+      csso = require('gulp-csso'),
       prefixer = require('gulp-autoprefixer'),
-      sourcemap = require('gulp-sourcemaps'),
       browserSync = require('browser-sync');
 
 browserSync.init({
@@ -24,10 +24,9 @@ function cleanHTML() {
 
 function buildCSS() {
   return gulp.src('./src/sass/*.scss')
-    .pipe(sourcemap.init())
     .pipe(sass())
-    .pipe(sourcemap.write())
     .pipe(prefixer())
+    .pipe(csso())
     .pipe(gulp.dest('./build'))
     .pipe(browserSync.stream());
 }
