@@ -6,9 +6,7 @@
   background-color: #FAF9EF;
   &__main {
     margin: 0 0 75px;
-  }
-  &__footer {
-    
+    flex-grow: 1;
   }
   &__aside {
     display: none;

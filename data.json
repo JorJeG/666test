@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "schema": "/images/studio-44.png",
+    "schema": "/images/studio-44.jpg",
     "title": "Студия №44",
     "option": "без отделки",
     "area": "28",
@@ -15,7 +15,7 @@
   },
   {
     "id": 1,
-    "schema": "/images/single-666.png",
+    "schema": "/images/single-666.jpg",
     "title": "Однокомнатная №666",
     "option": "базовая отделка",
     "area": "66",
@@ -29,7 +29,7 @@
   },
   {
     "id": 2,
-    "schema": "/images/two-567.png",
+    "schema": "/images/two-567.jpg",
     "title": "Двухкомнатная №567",
     "option": "черновая отделка",
     "area": "65.6",
@@ -43,7 +43,7 @@
   },
   {
     "id": 3,
-    "schema": "/images/three-45.png",
+    "schema": "/images/three-45.jpg",
     "title": "Трехкомнатная №45",
     "option": "без отделки",
     "area": "56",
@@ -57,7 +57,7 @@
   },
   {
     "id": 4,
-    "schema": "/images/studio-25.png",
+    "schema": "/images/studio-25.jpg",
     "title": "Студия №25",
     "option": "черновая отделка",
     "area": "18",
@@ -71,7 +71,7 @@
   },
   {
     "id": 5,
-    "schema": "/images/four-259.png",
+    "schema": "/images/four-259.jpg",
     "title": "Четырехкомнатная №259",
     "option": "черновая отделка",
     "area": "98",
@@ -85,7 +85,7 @@
   },
   {
     "id": 6,
-    "schema": "/images/single-56.png",
+    "schema": "/images/single-56.jpg",
     "title": "Однокомнатная №56",
     "option": "без отделки",
     "area": "36",
@@ -99,7 +99,7 @@
   },
   {
     "id": 7,
-    "schema": "/images/three-46.png",
+    "schema": "/images/three-46.jpg",
     "title": "Трехкомнатная №46",
     "option": "черновая отделка",
     "area": "86",
@@ -113,7 +113,7 @@
   },
   {
     "id": 8,
-    "schema": "/images/single-2.png",
+    "schema": "/images/single-2.jpg",
     "title": "Однокомнатная №2",
     "option": "черновая отделка",
     "area": "18",
@@ -127,7 +127,7 @@
   },
   {
     "id": 9,
-    "schema": "/images/studio-12.png",
+    "schema": "/images/studio-12.jpg",
     "title": "Студия №12",
     "option": "черновая отделка",
     "area": "38",
@@ -141,7 +141,7 @@
   },
   {
     "id": 10,
-    "schema": "/images/single-8.png",
+    "schema": "/images/single-8.jpg",
     "title": "Однокомнатная №8",
     "option": "черновая отделка",
     "area": "48",
@@ -155,7 +155,7 @@
   },
   {
     "id": 11,
-    "schema": "/images/two-23.png",
+    "schema": "/images/two-23.jpg",
     "title": "Двухкомнатная №23",
     "option": "базовая отделка",
     "area": "48",
