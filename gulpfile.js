@@ -4,6 +4,9 @@ const gulp = require('gulp'),
       sass = require('gulp-sass'),
       csso = require('gulp-csso'),
       prefixer = require('gulp-autoprefixer'),
+      bro = require('gulp-bro'),
+      uglify = require('gulp-uglify'),
+      babel = require('gulp-babel'),
       browserSync = require('browser-sync');
 
 browserSync.init({
@@ -31,12 +34,19 @@ function buildCSS() {
     .pipe(browserSync.stream());
 }
 
-gulp.task('html', gulp.series(cleanHTML, buildHTML));
-gulp.task('css', buildCSS);
+function buildJS() {
+  return gulp.src('./src/js/*.js')
+    .pipe(bro())
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
+    .pipe(uglify())
+    .pipe(gulp.dest('./build'));
+}
 
 function watch() {
   gulp.watch('./src/sass/**/*.scss', buildCSS);
   gulp.watch('./src/templates/**/*.pug').on('change', browserSync.reload);
 }
 
-gulp.task('default', gulp.series(buildCSS, watch));
+gulp.task('default', gulp.series(gulp.parallel(buildCSS, buildJS), watch));
