@@ -10,6 +10,7 @@
     display: flex;
     &_price,
     &_rooms {
+      cursor: pointer;
       position: relative;
       margin: 0 3rem 0 1rem;
       &::after {
@@ -41,6 +42,7 @@
     }
   }
   &__more-btn {
+    cursor: pointer;
     box-sizing: border-box;
     background: #046380;
     display: block;
