@@ -13,7 +13,7 @@ body {
   align-items: center;
 }
 
-.price-char:nth-last-child(3n):not(.price-char:first-child) {
+.price-char:nth-last-child(3n) {
   padding-left: 0.5rem;
 }
 
