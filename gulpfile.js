@@ -6,7 +6,7 @@ const gulp = require('gulp'),
       prefixer = require('gulp-autoprefixer'),
       bro = require('gulp-bro'),
       uglify = require('gulp-uglify'),
-      babel = require('gulp-babel'),
+      babelify = require('babelify'),
       browserSync = require('browser-sync');
 
 browserSync.init({
@@ -36,9 +36,12 @@ function buildCSS() {
 
 function buildJS() {
   return gulp.src('./src/js/*.js')
-    .pipe(bro())
-    .pipe(babel({
-      presets: ['@babel/env']
+    .pipe(bro({
+      transform: [
+        babelify.configure({
+          presets: ['@babel/env']
+        }, [{global: true}])
+      ]
     }))
     .pipe(uglify())
     .pipe(gulp.dest('./build'));

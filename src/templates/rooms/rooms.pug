@@ -10,7 +10,7 @@ each flat in flats
           </svg>
     div.card__row
       div.img-wrapper
-        img.card__img(src=flat.schema, alt=flat.title)
+        img.card__img.lazy(data-src=flat.schema, alt=flat.title)
     div.card__row
       h2.card__title= flat.title
     div.card__row

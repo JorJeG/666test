@@ -1,4 +1,5 @@
-const addBackToTop = require('vanilla-back-to-top').addBackToTop;
+import {addBackToTop} from 'vanilla-back-to-top';
+import LazyLoad from 'vanilla-lazyload';
 
 document.addEventListener('DOMContentLoaded', function(){
   const more = document.getElementById('more'),
@@ -13,13 +14,9 @@ document.addEventListener('DOMContentLoaded', function(){
         sortRoomsBtn = document.querySelector('.main__sort_rooms');
   
   let arrRooms = Array.prototype.slice.call(rooms__card);
+  const myLazy = new LazyLoad();
 
-  fetch('/data')
-    .then(resp => resp.text())
-    .then(data => {
-      rooms.innerHTML += data;
-      arrRooms = Array.prototype.slice.call(rooms.querySelectorAll('.rooms__card'));
-    });
+  loadRooms();
   
   more && more.addEventListener('click', (e) => {
     /**
@@ -27,12 +24,7 @@ document.addEventListener('DOMContentLoaded', function(){
      * сколько квартир пропустить с начала, пагинация
      */
     e.preventDefault();
-    fetch('/data')
-      .then(resp => resp.text())
-      .then(data => {
-        rooms.innerHTML += data;
-        arrRooms = Array.prototype.slice.call(rooms.querySelectorAll('.rooms__card'));
-      });
+    loadRooms();
   });
   
   tab.addEventListener('click', (e) => {
@@ -95,6 +87,16 @@ document.addEventListener('DOMContentLoaded', function(){
     arrRooms.forEach(room => frag.appendChild(room));
     rooms.innerHTML = '';
     rooms.appendChild(frag);
+  }
+
+  function loadRooms() {
+    fetch('/data')
+      .then(resp => resp.text())
+      .then(data => {
+        rooms.innerHTML += data;
+        arrRooms = Array.prototype.slice.call(rooms.querySelectorAll('.rooms__card'));
+        myLazy.update();
+      });
   }
   
 });
