@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function(){
         tab = document.querySelector('.nav__tab'),
         aside = document.querySelector('.page__aside'),
         main = document.querySelector('.main'),
+        page = document.querySelector('.page'),
+        overflow = document.querySelector('.overflow'),
         sortPriceBtn = document.querySelector('.main__sort_price'),
         sortRoomsBtn = document.querySelector('.main__sort_rooms');
   
@@ -37,6 +39,8 @@ document.addEventListener('DOMContentLoaded', function(){
     e.preventDefault();
     aside.classList.toggle('page__aside_open');
     tab.classList.toggle('nav__tab_open');
+    page.classList.toggle('page_hidden');
+    overflow.classList.toggle('overflow_hidden');
   });
   
   main.addEventListener('click', (e) => {
