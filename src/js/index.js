@@ -47,11 +47,11 @@ document.addEventListener('DOMContentLoaded', function(){
   }, false);
   
   sortPriceBtn.addEventListener('click', () => {
-    sortBy(sortPriceBtn, sortRoomsBtn);
+    sortBy(sortPriceBtn, sortRoomsBtn, 'price');
   });
   
   sortRoomsBtn.addEventListener('click', () => {
-    sortBy(sortRoomsBtn, sortPriceBtn);
+    sortBy(sortRoomsBtn, sortPriceBtn, 'rooms');
   });
   
   addBackToTop({
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function(){
     scrollDuration: 400
   });
   
-  function sortBy(element, another) {
+  function sortBy(element, another, byData) {
     const dataset = element.dataset;
     const frag = document.createDocumentFragment();
     if(dataset.active !== 'active') {
@@ -71,15 +71,15 @@ document.addEventListener('DOMContentLoaded', function(){
   
     if (dataset.direction === 'ascend') {
       arrRooms.sort(function(a, b) {
-        const num1 = parseInt(a.dataset.rooms);
-        const num2 = parseInt(b.dataset.rooms);
+        const num1 = parseInt(a.dataset[byData]);
+        const num2 = parseInt(b.dataset[byData]);
         return num1 - num2;
       });
       dataset.direction = 'descend';
     } else {
       arrRooms.sort(function(a, b) {
-        const num1 = parseInt(a.dataset.rooms);
-        const num2 = parseInt(b.dataset.rooms);
+        const num1 = parseInt(a.dataset[byData]);
+        const num2 = parseInt(b.dataset[byData]);
         return num2 - num1;
       });
       dataset.direction = 'ascend';
